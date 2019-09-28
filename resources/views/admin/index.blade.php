@@ -29,6 +29,26 @@
                                 <a href='/admin/exam'>Exam Administration</a>
                             </div>
                         @endcan
+                        @can('Browse Posts')
+                            <div>
+                                <a href='/admin/posts'>Blog Post Administration</a>
+                            </div>
+                        @endcan
+                        @can('Browse Pages')
+                            <div>
+                                <a href='/admin/pages'>Page Administration</a>
+                            </div>
+                        @endcan
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">Site Info</div>
+                    <div class="card-body">
+                        Domain: {{ $_SERVER[ 'SERVER_NAME' ] }}<br>
+                        App Name: {{ $_SERVER[ 'APP_NAME' ] }}<br>
+                        DB Name: {{ $_SERVER[ 'DB_DATABASE' ] }}<br>
                     </div>
                 </div>
             </div>
